@@ -30,9 +30,9 @@ class Steps:
         driver.find_element(By.XPATH, locator).send_keys(name)
 
     @staticmethod
-    def input_user_email(driver, locator, login):
+    def input_user_email(driver, locator, email):
         driver.find_element(By.XPATH, locator).clear()
-        driver.find_element(By.XPATH, locator).send_keys(f'{login}@ya.ru')
+        driver.find_element(By.XPATH, locator).send_keys(email)
 
     @staticmethod
     def input_user_password(driver, locator, password):

@@ -1,3 +1,4 @@
+from data import FIRST_TEST_USER_EMAIL, FIRST_TEST_USER_PASSWORD
 from locators import PERSONAL_ACCOUNT_LOCATOR, AUTH_FORM_TITLE_LOCATOR, AUTH_EMAIL_INPUT_LOCATOR, \
     AUTH_PASSWORD_INPUT_LOCATOR, AUTH_BUTTON_LOCATOR, GO_TO_AUTH_BUTTON_LOCATOR, REGISTRATION_BUTTON_LOCATOR, \
     REGISTRATION_FORM_TITLE_LOCATOR, GO_TO_AUTH_FORM_BUTTON_LOCATOR, FORGOT_PASSWORD_BUTTON_LOCATOR, \
@@ -5,20 +6,20 @@ from locators import PERSONAL_ACCOUNT_LOCATOR, AUTH_FORM_TITLE_LOCATOR, AUTH_EMA
 from steps import Steps
 
 
-class TestStellarBurgers:
+class TestStellarBurgersAuth:
 
     def test_success_auth_from_personal_account(self, driver):
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, AUTH_FORM_TITLE_LOCATOR)
         Steps.click_to_element(driver, AUTH_EMAIL_INPUT_LOCATOR)
-        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, 'BurgerD')
+        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, FIRST_TEST_USER_EMAIL)
         Steps.click_to_element(driver, AUTH_PASSWORD_INPUT_LOCATOR)
-        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, '1234qweR)')
+        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, FIRST_TEST_USER_PASSWORD)
         Steps.click_to_element(driver, AUTH_BUTTON_LOCATOR)
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, LOGOUT_BUTTON_LOCATOR)
         quit_button = Steps.find_element(driver, LOGOUT_BUTTON_LOCATOR)
-        assert quit_button is not None
+        assert quit_button
 
 
 
@@ -26,14 +27,14 @@ class TestStellarBurgers:
         Steps.click_to_element(driver, GO_TO_AUTH_BUTTON_LOCATOR)
         Steps.wait_element(driver, AUTH_FORM_TITLE_LOCATOR)
         Steps.click_to_element(driver, AUTH_EMAIL_INPUT_LOCATOR)
-        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, 'BurgerD')
+        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, FIRST_TEST_USER_EMAIL)
         Steps.click_to_element(driver, AUTH_PASSWORD_INPUT_LOCATOR)
-        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, '1234qweR)')
+        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, FIRST_TEST_USER_PASSWORD)
         Steps.click_to_element(driver, AUTH_BUTTON_LOCATOR)
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, LOGOUT_BUTTON_LOCATOR)
         quit_button = Steps.find_element(driver, LOGOUT_BUTTON_LOCATOR)
-        assert quit_button is not None
+        assert quit_button
 
 
 
@@ -45,14 +46,14 @@ class TestStellarBurgers:
         Steps.click_to_element(driver, GO_TO_AUTH_FORM_BUTTON_LOCATOR)
         Steps.wait_element(driver, AUTH_FORM_TITLE_LOCATOR)
         Steps.click_to_element(driver, AUTH_EMAIL_INPUT_LOCATOR)
-        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, 'BurgerD')
+        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, FIRST_TEST_USER_EMAIL)
         Steps.click_to_element(driver, AUTH_PASSWORD_INPUT_LOCATOR)
-        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, '1234qweR)')
+        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, FIRST_TEST_USER_PASSWORD)
         Steps.click_to_element(driver, AUTH_BUTTON_LOCATOR)
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, LOGOUT_BUTTON_LOCATOR)
         quit_button = Steps.find_element(driver, LOGOUT_BUTTON_LOCATOR)
-        assert quit_button is not None
+        assert quit_button
 
 
 
@@ -64,11 +65,11 @@ class TestStellarBurgers:
         Steps.click_to_element(driver, GO_TO_AUTH_FORM_BUTTON_LOCATOR)
         Steps.wait_element(driver, AUTH_FORM_TITLE_LOCATOR)
         Steps.click_to_element(driver, AUTH_EMAIL_INPUT_LOCATOR)
-        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, 'BurgerD')
+        Steps.input_user_email(driver, AUTH_EMAIL_INPUT_LOCATOR, FIRST_TEST_USER_EMAIL)
         Steps.click_to_element(driver, AUTH_PASSWORD_INPUT_LOCATOR)
-        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, '1234qweR)')
+        Steps.input_user_password(driver, AUTH_PASSWORD_INPUT_LOCATOR, FIRST_TEST_USER_PASSWORD)
         Steps.click_to_element(driver, AUTH_BUTTON_LOCATOR)
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, LOGOUT_BUTTON_LOCATOR)
         quit_button = Steps.find_element(driver, LOGOUT_BUTTON_LOCATOR)
-        assert quit_button is not None
+        assert quit_button

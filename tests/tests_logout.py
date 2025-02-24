@@ -2,13 +2,13 @@ from locators import PERSONAL_ACCOUNT_LOCATOR, LOGOUT_BUTTON_LOCATOR, MAIN_MENU_
 from steps import Steps
 
 
-class TestStellarBurgers:
+class TestStellarBurgersLogout:
 
-    def test_success_logout_by_logout_button(self,driver, login):
+    def test_success_logout_by_logout_button(self, driver, setup_login):
         Steps.wait_element(driver, MAIN_MENU_TITLE_LOCATOR)
         Steps.click_to_element(driver, PERSONAL_ACCOUNT_LOCATOR)
         Steps.wait_element(driver, LOGOUT_BUTTON_LOCATOR)
         Steps.click_to_element(driver, LOGOUT_BUTTON_LOCATOR)
         Steps.wait_element(driver, AUTH_FORM_TITLE_LOCATOR)
         auth_page = Steps.find_element(driver, AUTH_FORM_TITLE_LOCATOR)
-        assert auth_page is not None
+        assert auth_page
